@@ -1,4 +1,3 @@
-import 'package:e_wallet/shared/theme.dart';
 import 'package:e_wallet/ui/screens/splash_screen.dart';
 import 'package:flutter/material.dart';
 
