@@ -1,4 +1,4 @@
-# e_wallet
+# Bank SHA E-Wallet
 
 A new Flutter project.
 
