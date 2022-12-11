@@ -87,6 +87,8 @@ class SignUpSetProfileSceen extends StatelessWidget {
                 ),
                 const CustomTextFormField(
                   label: "Set PIN (6 digit number)",
+                  keyboardType: TextInputType.text,
+                  isObscure: true,
                 ),
                 const SizedBox(
                   height: 30,
