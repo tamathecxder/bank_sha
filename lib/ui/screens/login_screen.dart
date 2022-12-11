@@ -1,5 +1,6 @@
 import 'package:e_wallet/shared/theme.dart';
 import 'package:e_wallet/ui/widgets/buttons.dart';
+import 'package:e_wallet/ui/widgets/text_form_fields.dart';
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -44,35 +45,17 @@ class LoginScreen extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                // NOTE: Email Address
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      "Email Address",
-                      style: blackTextStyle.copyWith(
-                        fontWeight: medium,
-                        fontSize: 14,
-                      ),
-                    ),
-                    const SizedBox(
-                      height: 8,
-                    ),
-                    TextFormField(
-                      keyboardType: TextInputType.emailAddress,
-                      decoration: InputDecoration(
-                        contentPadding: const EdgeInsets.all(12),
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(14),
-                        ),
-                      ),
-                    ),
-                  ],
+                CustomTextFormField(
+                  label: "Email Address",
+                  keyboardType: TextInputType.emailAddress,
                 ),
                 const SizedBox(
                   height: 16,
                 ),
-                ////
+                CustomTextFormField(
+                  label: "Password",
+                  isObscure: true,
+                ),
                 const SizedBox(
                   height: 10,
                 ),
