@@ -81,7 +81,13 @@ class SignInScreen extends StatelessWidget {
                 ),
                 CustomFilledButton(
                   title: "Sign In",
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamedAndRemoveUntil(
+                      context,
+                      "/home",
+                      (route) => false,
+                    );
+                  },
                 ),
               ],
             ),

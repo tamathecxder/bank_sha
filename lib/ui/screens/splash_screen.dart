@@ -18,7 +18,11 @@ class _SplashScreenState extends State<SplashScreen> {
     Timer(
       const Duration(seconds: 2),
       () {
-        Navigator.pushNamed(context, "/onboarding");
+        Navigator.pushNamedAndRemoveUntil(
+          context,
+          "/onboarding",
+          (route) => false,
+        );
       },
     );
   }

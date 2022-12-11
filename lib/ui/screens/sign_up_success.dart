@@ -39,7 +39,13 @@ class SignUpSuccessScreen extends StatelessWidget {
               width: 184,
               height: 50,
               title: "Get Started",
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pushNamedAndRemoveUntil(
+                  context,
+                  "/home",
+                  (route) => false,
+                );
+              },
             ),
           ],
         ),

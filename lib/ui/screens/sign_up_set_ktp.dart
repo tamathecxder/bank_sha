@@ -1,6 +1,5 @@
 import 'package:e_wallet/shared/theme.dart';
 import 'package:e_wallet/ui/widgets/buttons.dart';
-import 'package:e_wallet/ui/widgets/forms.dart';
 import 'package:flutter/material.dart';
 
 class SignUpSetKtpSceen extends StatelessWidget {
