@@ -3,8 +3,8 @@ import 'package:e_wallet/ui/widgets/buttons.dart';
 import 'package:e_wallet/ui/widgets/forms.dart';
 import 'package:flutter/material.dart';
 
-class SignUpSetProfileSceen extends StatelessWidget {
-  const SignUpSetProfileSceen({super.key});
+class SignUpSetKtpSceen extends StatelessWidget {
+  const SignUpSetKtpSceen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +27,7 @@ class SignUpSetProfileSceen extends StatelessWidget {
             ),
           ),
           Text(
-            "Join Us to Unlock\nYour Growth",
+            "Verify Your\nAccount",
             style: blackTextStyle.copyWith(
               fontSize: 20,
               fontWeight: semiBold,
@@ -45,30 +45,17 @@ class SignUpSetProfileSceen extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                // Container(
-                //   width: 120,
-                //   height: 120,
-                //   decoration: BoxDecoration(
-                //     color: darkGreyColor,
-                //     shape: BoxShape.circle,
-                //   ),
-                //   child: Center(
-                //     child: Image.asset(
-                //       'assets/ic-upload.png',
-                //       width: 32,
-                //     ),
-                //   ),
-                // ),
                 Container(
                   width: 120,
                   height: 120,
-                  decoration: const BoxDecoration(
+                  decoration: BoxDecoration(
+                    color: darkGreyColor,
                     shape: BoxShape.circle,
-                    image: DecorationImage(
-                      image: AssetImage(
-                        'assets/img-profile.png',
-                      ),
-                      fit: BoxFit.cover,
+                  ),
+                  child: Center(
+                    child: Image.asset(
+                      'assets/ic-upload.png',
+                      width: 32,
                     ),
                   ),
                 ),
@@ -76,29 +63,28 @@ class SignUpSetProfileSceen extends StatelessWidget {
                   height: 16,
                 ),
                 Text(
-                  "John Doe",
+                  "Passport / ID Card",
                   style: blackTextStyle.copyWith(
                     fontSize: 18,
                     fontWeight: medium,
                   ),
                 ),
                 const SizedBox(
-                  height: 30,
-                ),
-                const CustomTextFormField(
-                  label: "Set PIN (6 digit number)",
-                ),
-                const SizedBox(
-                  height: 30,
+                  height: 50,
                 ),
                 CustomFilledButton(
                   title: "Continue",
-                  onPressed: () {
-                    Navigator.pushNamed(context, "/sign-up-set-ktp");
-                  },
+                  onPressed: () {},
                 ),
               ],
             ),
+          ),
+          const SizedBox(
+            height: 60,
+          ),
+          CustomTextButton(
+            title: "Skip for Now",
+            onPressed: () {},
           ),
         ],
       ),
