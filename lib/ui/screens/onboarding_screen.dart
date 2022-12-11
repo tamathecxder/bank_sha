@@ -119,28 +119,16 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                           const SizedBox(
                             height: 20,
                           ),
-                          SizedBox(
-                            height: 24,
-                            child: TextButton(
-                              onPressed: () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) => const LoginScreen(),
-                                  ),
-                                );
-                              },
-                              style: TextButton.styleFrom(
-                                padding: EdgeInsets.zero,
-                                splashFactory: NoSplash.splashFactory,
-                              ),
-                              child: Text(
-                                "Sign In",
-                                style: greyTextStyle.copyWith(
-                                  fontSize: 16,
+                          CustomTextButton(
+                            title: "Sign In",
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => const LoginScreen(),
                                 ),
-                              ),
-                            ),
+                              );
+                            },
                           ),
                         ],
                       )
@@ -180,35 +168,13 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                             ),
                           ),
                           const Spacer(),
-                          Container(
-                            decoration: BoxDecoration(
-                              color: blueColor,
-                              borderRadius: BorderRadius.circular(
-                                56,
-                              ),
-                            ),
-                            child: Material(
-                              color: Colors.transparent,
-                              child: InkWell(
-                                borderRadius: BorderRadius.circular(56),
-                                onTap: () {
-                                  print("tapped");
-                                  carouselController.nextPage();
-                                },
-                                child: SizedBox(
-                                  width: 150,
-                                  height: 50,
-                                  child: Center(
-                                      child: Text(
-                                    "Continue",
-                                    style: whiteTextStyle.copyWith(
-                                      fontSize: 16,
-                                      fontWeight: semiBold,
-                                    ),
-                                  )),
-                                ),
-                              ),
-                            ),
+                          CustomFilledButton(
+                            title: "Continue",
+                            width: 150,
+                            height: 50,
+                            onPressed: () {
+                              carouselController.nextPage();
+                            },
                           ),
                         ],
                       ),

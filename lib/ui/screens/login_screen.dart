@@ -1,4 +1,5 @@
 import 'package:e_wallet/shared/theme.dart';
+import 'package:e_wallet/ui/widgets/buttons.dart';
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -71,83 +72,33 @@ class LoginScreen extends StatelessWidget {
                 const SizedBox(
                   height: 16,
                 ),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      "Password",
-                      style: blackTextStyle.copyWith(
-                        fontWeight: medium,
+                ////
+                const SizedBox(
+                  height: 10,
+                ),
+                Align(
+                  alignment: Alignment.centerRight,
+                  child: TextButton(
+                    onPressed: () {},
+                    style: TextButton.styleFrom(
+                      minimumSize: Size.zero,
+                      padding: EdgeInsets.zero,
+                      tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                    ),
+                    child: Text(
+                      "Forgot Password",
+                      style: lightBlueTextStyle.copyWith(
                         fontSize: 14,
                       ),
                     ),
-                    const SizedBox(
-                      height: 8,
-                    ),
-                    TextFormField(
-                      keyboardType: TextInputType.text,
-                      obscureText: true,
-                      decoration: InputDecoration(
-                        contentPadding: const EdgeInsets.all(12),
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(14),
-                        ),
-                      ),
-                    ),
-                    const SizedBox(
-                      height: 10,
-                    ),
-                    Align(
-                      alignment: Alignment.centerRight,
-                      child: TextButton(
-                        onPressed: () {},
-                        style: TextButton.styleFrom(
-                          minimumSize: Size.zero,
-                          padding: EdgeInsets.zero,
-                          tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-                        ),
-                        child: Text(
-                          "Forgot Password",
-                          style: lightBlueTextStyle.copyWith(
-                            fontSize: 14,
-                          ),
-                        ),
-                      ),
-                    ),
-                    const SizedBox(
-                      height: 30,
-                    ),
-                    Container(
-                      decoration: BoxDecoration(
-                        color: blueColor,
-                        borderRadius: BorderRadius.circular(
-                          56,
-                        ),
-                      ),
-                      child: Material(
-                        color: Colors.transparent,
-                        child: InkWell(
-                          borderRadius: BorderRadius.circular(56),
-                          onTap: () {
-                            print("tapped");
-                          },
-                          child: SizedBox(
-                            width: double.infinity,
-                            height: 50,
-                            child: Center(
-                              child: Text(
-                                "Sign In",
-                                style: whiteTextStyle.copyWith(
-                                  fontSize: 16,
-                                  fontWeight: semiBold,
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
+                  ),
+                ),
+                const SizedBox(
+                  height: 30,
+                ),
+                CustomFilledButton(
+                  title: "Sign In",
+                  onPressed: () {},
                 ),
               ],
             ),
@@ -155,22 +106,9 @@ class LoginScreen extends StatelessWidget {
           const SizedBox(
             height: 50,
           ),
-          SizedBox(
-            width: double.infinity,
-            height: 24,
-            child: TextButton(
-              onPressed: () {},
-              style: TextButton.styleFrom(
-                padding: EdgeInsets.zero,
-                splashFactory: NoSplash.splashFactory,
-              ),
-              child: Text(
-                "Create New Account",
-                style: greyTextStyle.copyWith(
-                  fontSize: 16,
-                ),
-              ),
-            ),
+          CustomTextButton(
+            title: "Create New Account",
+            onPressed: () {},
           ),
         ],
       ),
