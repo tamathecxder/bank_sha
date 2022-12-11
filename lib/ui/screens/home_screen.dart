@@ -15,6 +15,7 @@ class HomeScreen extends StatelessWidget {
         children: [
           buildProfile(),
           buildWalletCard(),
+          buildLevel(),
         ],
       ),
       bottomNavigationBar: BottomAppBar(
@@ -198,6 +199,68 @@ class HomeScreen extends StatelessWidget {
             style: whiteTextStyle.copyWith(
               fontSize: 24,
               fontWeight: semiBold,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget buildLevel() {
+    return Container(
+      width: double.infinity,
+      height: 80,
+      margin: const EdgeInsets.only(
+        top: 20,
+      ),
+      padding: const EdgeInsets.all(22),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(20),
+        color: whiteColor,
+      ),
+      child: Column(
+        children: [
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                "Level 1",
+                style: blackTextStyle.copyWith(
+                  fontSize: 14,
+                  fontWeight: medium,
+                ),
+              ),
+              RichText(
+                text: TextSpan(
+                  children: [
+                    TextSpan(
+                      text: "55% ",
+                      style: greenTextStyle.copyWith(
+                        fontWeight: semiBold,
+                      ),
+                    ),
+                    TextSpan(
+                      text: "of Rp 20.000",
+                      style: blackTextStyle.copyWith(
+                        fontWeight: semiBold,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(
+            height: 10,
+          ),
+          ClipRRect(
+            borderRadius: BorderRadius.circular(55),
+            child: LinearProgressIndicator(
+              minHeight: 5,
+              value: 0.55,
+              valueColor: AlwaysStoppedAnimation(greenColor),
+              backgroundColor: greyColor.withOpacity(0.2),
             ),
           ),
         ],
