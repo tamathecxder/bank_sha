@@ -2,6 +2,7 @@
 
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:e_wallet/shared/theme.dart';
+import 'package:e_wallet/ui/screens/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_controller.dart';
 
@@ -143,7 +144,14 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                           SizedBox(
                             height: 24,
                             child: TextButton(
-                              onPressed: () {},
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => const LoginScreen(),
+                                  ),
+                                );
+                              },
                               style: TextButton.styleFrom(
                                 padding: EdgeInsets.zero,
                                 splashFactory: NoSplash.splashFactory,
