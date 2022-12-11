@@ -2,10 +2,8 @@
 
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:e_wallet/shared/theme.dart';
-import 'package:e_wallet/ui/screens/login_screen.dart';
 import 'package:e_wallet/ui/widgets/buttons.dart';
 import 'package:flutter/material.dart';
-import 'package:carousel_slider/carousel_controller.dart';
 
 class OnboardingScreen extends StatefulWidget {
   const OnboardingScreen({super.key});
@@ -122,12 +120,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                           CustomTextButton(
                             title: "Sign In",
                             onPressed: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => const LoginScreen(),
-                                ),
-                              );
+                              Navigator.pushNamed(context, "/sign-in");
                             },
                           ),
                         ],

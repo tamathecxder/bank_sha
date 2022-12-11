@@ -1,3 +1,5 @@
+import 'package:e_wallet/ui/screens/sign_in_screen.dart';
+import 'package:e_wallet/ui/screens/onboarding_screen.dart';
 import 'package:e_wallet/ui/screens/splash_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -8,9 +10,13 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: SplashScreen(),
+      routes: {
+        "/": (context) => const SplashScreen(),
+        "/onboarding": (context) => const OnboardingScreen(),
+        "/sign-in": (context) => const SignInScreen(),
+      },
     );
   }
 }
