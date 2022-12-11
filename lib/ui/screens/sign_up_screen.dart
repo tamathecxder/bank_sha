@@ -3,8 +3,8 @@ import 'package:e_wallet/ui/widgets/buttons.dart';
 import 'package:e_wallet/ui/widgets/forms.dart';
 import 'package:flutter/material.dart';
 
-class SignInScreen extends StatelessWidget {
-  const SignInScreen({super.key});
+class SignUpScreen extends StatelessWidget {
+  const SignUpScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +27,7 @@ class SignInScreen extends StatelessWidget {
             ),
           ),
           Text(
-            "Sign In &\nGrow Your Finance",
+            "Join Us to Unlock\nYour Growth",
             style: blackTextStyle.copyWith(
               fontSize: 20,
               fontWeight: semiBold,
@@ -46,6 +46,12 @@ class SignInScreen extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const CustomTextFormField(
+                  label: "Full Name",
+                ),
+                const SizedBox(
+                  height: 16,
+                ),
+                const CustomTextFormField(
                   label: "Email Address",
                   keyboardType: TextInputType.emailAddress,
                 ),
@@ -57,30 +63,10 @@ class SignInScreen extends StatelessWidget {
                   isObscure: true,
                 ),
                 const SizedBox(
-                  height: 10,
-                ),
-                Align(
-                  alignment: Alignment.centerRight,
-                  child: TextButton(
-                    onPressed: () {},
-                    style: TextButton.styleFrom(
-                      minimumSize: Size.zero,
-                      padding: EdgeInsets.zero,
-                      tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-                    ),
-                    child: Text(
-                      "Forgot Password",
-                      style: lightBlueTextStyle.copyWith(
-                        fontSize: 14,
-                      ),
-                    ),
-                  ),
-                ),
-                const SizedBox(
                   height: 30,
                 ),
                 CustomFilledButton(
-                  title: "Sign In",
+                  title: "Continue",
                   onPressed: () {},
                 ),
               ],
@@ -90,9 +76,9 @@ class SignInScreen extends StatelessWidget {
             height: 50,
           ),
           CustomTextButton(
-            title: "Create New Account",
+            title: "Sign In",
             onPressed: () {
-              Navigator.pushNamed(context, "/sign-up");
+              Navigator.pushNamed(context, "/sign-in");
             },
           ),
         ],

@@ -111,7 +111,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                           CustomFilledButton(
                             title: "Get Started",
                             onPressed: () {
-                              print("test");
+                              Navigator.pushNamed(context, "/sign-up");
                             },
                           ),
                           const SizedBox(

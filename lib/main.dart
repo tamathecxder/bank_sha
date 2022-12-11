@@ -1,5 +1,6 @@
 import 'package:e_wallet/ui/screens/sign_in_screen.dart';
 import 'package:e_wallet/ui/screens/onboarding_screen.dart';
+import 'package:e_wallet/ui/screens/sign_up_screen.dart';
 import 'package:e_wallet/ui/screens/splash_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -16,6 +17,7 @@ class MyApp extends StatelessWidget {
         "/": (context) => const SplashScreen(),
         "/onboarding": (context) => const OnboardingScreen(),
         "/sign-in": (context) => const SignInScreen(),
+        "/sign-up": (context) => const SignUpScreen(),
       },
     );
   }
