@@ -2,16 +2,18 @@ import 'package:e_wallet/shared/theme.dart';
 import 'package:flutter/material.dart';
 
 class CustomTextFormField extends StatelessWidget {
-  CustomTextFormField({
+  const CustomTextFormField({
     super.key,
+    required this.label,
     this.keyboardType = TextInputType.text,
     this.isObscure = false,
-    required this.label,
+    this.controller,
   });
 
   final String label;
   final TextInputType keyboardType;
   final bool isObscure;
+  final TextEditingController? controller;
 
   @override
   Widget build(BuildContext context) {
@@ -29,6 +31,7 @@ class CustomTextFormField extends StatelessWidget {
           height: 8,
         ),
         TextFormField(
+          controller: controller,
           keyboardType: keyboardType,
           obscureText: isObscure,
           decoration: InputDecoration(

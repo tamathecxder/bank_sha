@@ -1,6 +1,6 @@
 import 'package:e_wallet/shared/theme.dart';
 import 'package:e_wallet/ui/widgets/buttons.dart';
-import 'package:e_wallet/ui/widgets/text_form_fields.dart';
+import 'package:e_wallet/ui/widgets/forms.dart';
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -11,16 +11,16 @@ class LoginScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: lightColor,
       body: ListView(
-        padding: EdgeInsets.symmetric(horizontal: 24),
+        padding: const EdgeInsets.symmetric(horizontal: 24),
         children: [
           Container(
-            margin: EdgeInsets.only(
+            margin: const EdgeInsets.only(
               top: 100,
               bottom: 100,
             ),
             width: 155,
             height: 50,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               image: DecorationImage(
                 image: AssetImage('assets/logo-sha-light.png'),
               ),
@@ -37,7 +37,7 @@ class LoginScreen extends StatelessWidget {
             height: 30,
           ),
           Container(
-            padding: EdgeInsets.all(22),
+            padding: const EdgeInsets.all(22),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20),
               color: whiteColor,
