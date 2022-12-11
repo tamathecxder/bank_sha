@@ -5,6 +5,7 @@ Color blackColor = const Color(0xFF14193F);
 Color whiteColor = const Color(0xFFFFFFFF);
 Color blueColor = const Color(0xFF5142E6);
 Color greyColor = const Color(0xFFA4A8AE);
+Color darkGreyColor = const Color(0xFFF1F1F9);
 Color lightColor = const Color(0xFFF6F8FB);
 Color darkColor = const Color(0xFF020518);
 Color semiDarkColor = const Color(0xFF1A1D2E);

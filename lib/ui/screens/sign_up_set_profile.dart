@@ -3,8 +3,8 @@ import 'package:e_wallet/ui/widgets/buttons.dart';
 import 'package:e_wallet/ui/widgets/forms.dart';
 import 'package:flutter/material.dart';
 
-class SignUpScreen extends StatelessWidget {
-  const SignUpScreen({super.key});
+class SignUpSetProfileSceen extends StatelessWidget {
+  const SignUpSetProfileSceen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -43,45 +43,60 @@ class SignUpScreen extends StatelessWidget {
               color: whiteColor,
             ),
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                const CustomTextFormField(
-                  label: "Full Name",
+                // Container(
+                //   width: 120,
+                //   height: 120,
+                //   decoration: BoxDecoration(
+                //     color: darkGreyColor,
+                //     shape: BoxShape.circle,
+                //   ),
+                //   child: Center(
+                //     child: Image.asset(
+                //       'assets/ic-upload.png',
+                //       width: 32,
+                //     ),
+                //   ),
+                // ),
+                Container(
+                  width: 120,
+                  height: 120,
+                  decoration: const BoxDecoration(
+                    shape: BoxShape.circle,
+                    image: DecorationImage(
+                      image: AssetImage(
+                        'assets/img-profile.png',
+                      ),
+                      fit: BoxFit.cover,
+                    ),
+                  ),
                 ),
                 const SizedBox(
                   height: 16,
                 ),
-                const CustomTextFormField(
-                  label: "Email Address",
-                  keyboardType: TextInputType.emailAddress,
+                Text(
+                  "John Doe",
+                  style: blackTextStyle.copyWith(
+                    fontSize: 18,
+                    fontWeight: medium,
+                  ),
                 ),
                 const SizedBox(
-                  height: 16,
+                  height: 30,
                 ),
                 const CustomTextFormField(
-                  label: "Password",
-                  isObscure: true,
+                  label: "Set PIN (6 digit number)",
                 ),
                 const SizedBox(
                   height: 30,
                 ),
                 CustomFilledButton(
                   title: "Continue",
-                  onPressed: () {
-                    Navigator.pushNamed(context, "/sign-up-set-profile");
-                  },
+                  onPressed: () {},
                 ),
               ],
             ),
-          ),
-          const SizedBox(
-            height: 50,
-          ),
-          CustomTextButton(
-            title: "Sign In",
-            onPressed: () {
-              Navigator.pushNamed(context, "/sign-in");
-            },
           ),
         ],
       ),
