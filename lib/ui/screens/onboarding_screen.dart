@@ -3,6 +3,7 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:e_wallet/shared/theme.dart';
 import 'package:e_wallet/ui/screens/login_screen.dart';
+import 'package:e_wallet/ui/widgets/buttons.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_controller.dart';
 
@@ -109,34 +110,11 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 currentIndex == 2
                     ? Column(
                         children: [
-                          Container(
-                            decoration: BoxDecoration(
-                              color: blueColor,
-                              borderRadius: BorderRadius.circular(
-                                56,
-                              ),
-                            ),
-                            child: Material(
-                              color: Colors.transparent,
-                              child: InkWell(
-                                borderRadius: BorderRadius.circular(56),
-                                onTap: () {
-                                  print("tapped");
-                                },
-                                child: SizedBox(
-                                  width: double.infinity,
-                                  height: 50,
-                                  child: Center(
-                                      child: Text(
-                                    "Get Started",
-                                    style: whiteTextStyle.copyWith(
-                                      fontSize: 16,
-                                      fontWeight: semiBold,
-                                    ),
-                                  )),
-                                ),
-                              ),
-                            ),
+                          CustomFilledButton(
+                            title: "Get Started",
+                            onPressed: () {
+                              print("test");
+                            },
                           ),
                           const SizedBox(
                             height: 20,
