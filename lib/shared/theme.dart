@@ -13,6 +13,7 @@ Color lightBlueColor = const Color(0xFF53C1F9);
 Color greenColor = const Color(0xFF22B07D);
 
 TextStyle blackTextStyle = GoogleFonts.poppins(color: blackColor);
+TextStyle blueTextStyle = GoogleFonts.poppins(color: blueColor);
 TextStyle whiteTextStyle = GoogleFonts.poppins(color: whiteColor);
 TextStyle greyTextStyle = GoogleFonts.poppins(color: greyColor);
 TextStyle lightBlueTextStyle = GoogleFonts.poppins(color: lightBlueColor);
