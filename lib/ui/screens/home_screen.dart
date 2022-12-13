@@ -1,4 +1,5 @@
 import 'package:e_wallet/shared/theme.dart';
+import 'package:e_wallet/ui/widgets/home_service_item.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -16,6 +17,7 @@ class HomeScreen extends StatelessWidget {
           buildProfile(),
           buildWalletCard(),
           buildLevel(),
+          buildServices(),
         ],
       ),
       bottomNavigationBar: BottomAppBar(
@@ -262,6 +264,54 @@ class HomeScreen extends StatelessWidget {
               valueColor: AlwaysStoppedAnimation(greenColor),
               backgroundColor: greyColor.withOpacity(0.2),
             ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget buildServices() {
+    return Container(
+      margin: const EdgeInsets.only(
+        top: 30,
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            'Do Something',
+            style: blackTextStyle.copyWith(
+              fontSize: 16,
+              fontWeight: semiBold,
+            ),
+          ),
+          const SizedBox(
+            height: 14,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              HomeServiceItem(
+                iconUrl: "assets/ic-top-up.png",
+                title: "Top Up",
+                onTap: () {},
+              ),
+              HomeServiceItem(
+                iconUrl: "assets/ic-send.png",
+                title: "Send",
+                onTap: () {},
+              ),
+              HomeServiceItem(
+                iconUrl: "assets/ic-withdraw.png",
+                title: "Withdraw",
+                onTap: () {},
+              ),
+              HomeServiceItem(
+                iconUrl: "assets/ic-more.png",
+                title: "More",
+                onTap: () {},
+              ),
+            ],
           ),
         ],
       ),
