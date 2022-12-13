@@ -1,4 +1,5 @@
 import 'package:e_wallet/shared/theme.dart';
+import 'package:e_wallet/ui/widgets/home_latest_transaction_item.dart';
 import 'package:e_wallet/ui/widgets/home_service_item.dart';
 import 'package:flutter/material.dart';
 
@@ -18,6 +19,7 @@ class HomeScreen extends StatelessWidget {
           buildWalletCard(),
           buildLevel(),
           buildServices(),
+          BuildLatestTransactions(),
         ],
       ),
       bottomNavigationBar: BottomAppBar(
@@ -312,6 +314,72 @@ class HomeScreen extends StatelessWidget {
                 onTap: () {},
               ),
             ],
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget BuildLatestTransactions() {
+    return Container(
+      margin: const EdgeInsets.only(top: 30),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            "Latest Transactions",
+            style: blackTextStyle.copyWith(
+              fontSize: 16,
+              fontWeight: semiBold,
+            ),
+          ),
+          const SizedBox(
+            height: 14,
+          ),
+          Container(
+            padding: const EdgeInsets.all(22),
+            margin: const EdgeInsets.only(
+              top: 14,
+            ),
+            width: double.infinity,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(20),
+              color: whiteColor,
+            ),
+            child: Column(
+              children: const [
+                HomeLatestTransactionItem(
+                  title: "Top Up",
+                  time: "2 Days Ago",
+                  amount: "525.000",
+                  iconUrl: "assets/ic-transactions-topup.png",
+                ),
+                HomeLatestTransactionItem(
+                  title: "Cashback",
+                  time: "11 Sep",
+                  amount: "22.000",
+                  iconUrl: "assets/ic-transactions-cashback.png",
+                ),
+                HomeLatestTransactionItem(
+                  title: "Withdraw",
+                  time: "5 Minutes Ago",
+                  amount: "50.000",
+                  iconUrl: "assets/ic-transactions-withdraw.png",
+                ),
+                HomeLatestTransactionItem(
+                  title: "Transfer",
+                  time: "10 Dec",
+                  amount: "1.000.000",
+                  iconUrl: "assets/ic-transactions-transfer.png",
+                ),
+                HomeLatestTransactionItem(
+                  title: "Electric",
+                  time: "2 Aug",
+                  amount: "105.000",
+                  iconUrl: "assets/ic-transactions-electric.png",
+                ),
+              ],
+            ),
           ),
         ],
       ),
