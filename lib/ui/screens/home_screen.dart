@@ -1,8 +1,10 @@
 import 'package:e_wallet/shared/theme.dart';
 import 'package:e_wallet/ui/widgets/home_latest_transaction_item.dart';
 import 'package:e_wallet/ui/widgets/home_service_item.dart';
+import 'package:e_wallet/ui/widgets/home_tips_item.dart';
 import 'package:e_wallet/ui/widgets/home_user_item_send_again.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -22,6 +24,7 @@ class HomeScreen extends StatelessWidget {
           buildServices(),
           buildLatestTransactions(),
           buildSendAgain(),
+          buildFriendlyTips(),
         ],
       ),
       bottomNavigationBar: BottomAppBar(
@@ -429,6 +432,31 @@ class HomeScreen extends StatelessWidget {
                 ),
               ],
             ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget buildFriendlyTips() {
+    return Container(
+      margin: const EdgeInsets.only(top: 30),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            "Friendly Tips",
+            style: blackTextStyle.copyWith(
+              fontSize: 16,
+              fontWeight: semiBold,
+            ),
+          ),
+          const SizedBox(
+            height: 14,
+          ),
+          HomeTipsItem(
+            title: "Best tips for using\na credit card",
+            imgUrl: "assets/img-tips1.png",
           ),
         ],
       ),
