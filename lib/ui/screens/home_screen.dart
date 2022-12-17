@@ -454,9 +454,33 @@ class HomeScreen extends StatelessWidget {
           const SizedBox(
             height: 14,
           ),
-          HomeTipsItem(
-            title: "Best tips for using\na credit card",
-            imgUrl: "assets/img-tips1.png",
+          Wrap(
+            runAlignment: WrapAlignment.spaceBetween,
+            alignment: WrapAlignment.spaceBetween,
+            runSpacing: 16,
+            spacing: 18,
+            children: const [
+              HomeTipsItem(
+                title: "Best tips for using credit card",
+                imgUrl: "assets/img-tips1.png",
+                url: "https://google.com",
+              ),
+              HomeTipsItem(
+                title: "Spot the good pie of finance model",
+                imgUrl: "assets/img-tips2.png",
+                url: "https://google.com",
+              ),
+              HomeTipsItem(
+                title: "Great hack to get better advices",
+                imgUrl: "assets/img-tips3.png",
+                url: "https://google.com",
+              ),
+              HomeTipsItem(
+                title: "Save more penny buy this instead",
+                imgUrl: "assets/img-tips4.png",
+                url: "https://google.com",
+              ),
+            ],
           ),
         ],
       ),

@@ -26,7 +26,7 @@ class HomeTipsItem extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           ClipRRect(
-            borderRadius: BorderRadius.vertical(
+            borderRadius: const BorderRadius.vertical(
               top: Radius.circular(
                 20,
               ),
@@ -38,14 +38,16 @@ class HomeTipsItem extends StatelessWidget {
               fit: BoxFit.cover,
             ),
           ),
-          const SizedBox(
-            height: 12,
-          ),
-          Text(
-            title,
-            style: blackTextStyle.copyWith(
-              fontWeight: medium,
-              fontSize: 12,
+          Padding(
+            padding: const EdgeInsets.all(12),
+            child: Text(
+              title,
+              overflow: TextOverflow.ellipsis,
+              maxLines: 2,
+              style: blackTextStyle.copyWith(
+                fontWeight: medium,
+                fontSize: 12,
+              ),
             ),
           ),
         ],
