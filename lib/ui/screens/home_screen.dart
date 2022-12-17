@@ -1,6 +1,7 @@
 import 'package:e_wallet/shared/theme.dart';
 import 'package:e_wallet/ui/widgets/home_latest_transaction_item.dart';
 import 'package:e_wallet/ui/widgets/home_service_item.dart';
+import 'package:e_wallet/ui/widgets/home_user_item_send_again.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -19,7 +20,8 @@ class HomeScreen extends StatelessWidget {
           buildWalletCard(),
           buildLevel(),
           buildServices(),
-          BuildLatestTransactions(),
+          buildLatestTransactions(),
+          buildSendAgain(),
         ],
       ),
       bottomNavigationBar: BottomAppBar(
@@ -320,7 +322,7 @@ class HomeScreen extends StatelessWidget {
     );
   }
 
-  Widget BuildLatestTransactions() {
+  Widget buildLatestTransactions() {
     return Container(
       margin: const EdgeInsets.only(top: 30),
       child: Column(
@@ -377,6 +379,53 @@ class HomeScreen extends StatelessWidget {
                   time: "2 Aug",
                   amount: "105.000",
                   iconUrl: "assets/ic-transactions-electric.png",
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget buildSendAgain() {
+    return Container(
+      margin: const EdgeInsets.only(
+        top: 30,
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            "Send Again",
+            style: blackTextStyle.copyWith(
+              fontSize: 16,
+              fontWeight: semiBold,
+            ),
+          ),
+          const SizedBox(
+            height: 14,
+          ),
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: const [
+                HomeUserItemSendAgain(
+                  imgUrl: 'assets/img-friends-1.png',
+                  username: 'Ysabelle',
+                ),
+                HomeUserItemSendAgain(
+                  imgUrl: 'assets/img-friends-2.png',
+                  username: 'Amanda',
+                ),
+                HomeUserItemSendAgain(
+                  imgUrl: 'assets/img-friends-3.png',
+                  username: 'Christ',
+                ),
+                HomeUserItemSendAgain(
+                  imgUrl: 'assets/img-friends-4.png',
+                  username: 'Dadang',
                 ),
               ],
             ),
