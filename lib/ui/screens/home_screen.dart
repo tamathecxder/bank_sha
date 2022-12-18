@@ -114,7 +114,7 @@ class HomeScreen extends StatelessWidget {
                 height: 2,
               ),
               Text(
-                "shaynahan",
+                "dedekawugg",
                 style: blackTextStyle.copyWith(
                   fontSize: 20,
                   fontWeight: semiBold,
@@ -182,7 +182,7 @@ class HomeScreen extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            'Shayna Hana',
+            'Nur Sholekhah',
             style: whiteTextStyle.copyWith(
               fontSize: 18,
               fontWeight: medium,
