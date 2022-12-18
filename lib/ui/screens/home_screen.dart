@@ -18,7 +18,7 @@ class HomeScreen extends StatelessWidget {
           horizontal: 24,
         ),
         children: [
-          buildProfile(),
+          buildProfile(context),
           buildWalletCard(),
           buildLevel(),
           buildServices(),
@@ -93,7 +93,7 @@ class HomeScreen extends StatelessWidget {
     );
   }
 
-  Widget buildProfile() {
+  Widget buildProfile(BuildContext context) {
     return Container(
       margin: const EdgeInsets.only(
         top: 40,
@@ -122,29 +122,34 @@ class HomeScreen extends StatelessWidget {
               ),
             ],
           ),
-          Container(
-            width: 60,
-            height: 60,
-            decoration: const BoxDecoration(
-              shape: BoxShape.circle,
-              image: DecorationImage(
-                image: AssetImage('assets/img-profile.png'),
-                fit: BoxFit.cover,
-              ),
-            ),
-            child: Align(
-              alignment: Alignment.topRight,
-              child: Container(
-                width: 18,
-                height: 18,
-                decoration: BoxDecoration(
-                  color: whiteColor,
-                  borderRadius: BorderRadius.circular(18 / 2),
+          GestureDetector(
+            onTap: () {
+              Navigator.pushNamed(context, "/profile");
+            },
+            child: Container(
+              width: 60,
+              height: 60,
+              decoration: const BoxDecoration(
+                shape: BoxShape.circle,
+                image: DecorationImage(
+                  image: AssetImage('assets/img-profile.png'),
+                  fit: BoxFit.cover,
                 ),
-                child: Icon(
-                  Icons.check_circle,
-                  color: greenColor,
-                  size: 14,
+              ),
+              child: Align(
+                alignment: Alignment.topRight,
+                child: Container(
+                  width: 18,
+                  height: 18,
+                  decoration: BoxDecoration(
+                    color: whiteColor,
+                    borderRadius: BorderRadius.circular(18 / 2),
+                  ),
+                  child: Icon(
+                    Icons.check_circle,
+                    color: greenColor,
+                    size: 14,
+                  ),
                 ),
               ),
             ),
@@ -440,7 +445,10 @@ class HomeScreen extends StatelessWidget {
 
   Widget buildFriendlyTips() {
     return Container(
-      margin: const EdgeInsets.only(top: 30),
+      margin: const EdgeInsets.only(
+        top: 30,
+        bottom: 50,
+      ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -463,12 +471,12 @@ class HomeScreen extends StatelessWidget {
               HomeTipsItem(
                 title: "Best tips for using credit card",
                 imgUrl: "assets/img-tips1.png",
-                url: "https://google.com",
+                url: "https://pub.dev",
               ),
               HomeTipsItem(
                 title: "Spot the good pie of finance model",
                 imgUrl: "assets/img-tips2.png",
-                url: "https://google.com",
+                url: "https://github.com/tamathecxder",
               ),
               HomeTipsItem(
                 title: "Great hack to get better advices",
