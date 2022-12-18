@@ -9,21 +9,10 @@ class ProfileScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: lightColor,
       appBar: AppBar(
-        iconTheme: IconThemeData(
-          color: blackColor,
-        ),
-        backgroundColor: lightColor,
-        title: Text(
+        title: const Text(
           "My Profile",
-          style: blackTextStyle.copyWith(
-            fontWeight: semiBold,
-            fontSize: 20,
-          ),
         ),
-        centerTitle: true,
-        elevation: 0.0,
       ),
       body: ListView(
         padding: const EdgeInsets.symmetric(

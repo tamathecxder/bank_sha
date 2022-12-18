@@ -1,3 +1,4 @@
+import 'package:e_wallet/shared/theme.dart';
 import 'package:e_wallet/ui/screens/home_screen.dart';
 import 'package:e_wallet/ui/screens/profile_screen.dart';
 import 'package:e_wallet/ui/screens/sign_in_screen.dart';
@@ -18,6 +19,21 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        scaffoldBackgroundColor: lightColor,
+        appBarTheme: AppBarTheme(
+          iconTheme: IconThemeData(
+            color: blackColor,
+          ),
+          backgroundColor: lightColor,
+          centerTitle: true,
+          elevation: 0.0,
+          titleTextStyle: blackTextStyle.copyWith(
+            fontWeight: semiBold,
+            fontSize: 20,
+          ),
+        ),
+      ),
       routes: {
         "/": (context) => const SplashScreen(),
         "/onboarding": (context) => const OnboardingScreen(),

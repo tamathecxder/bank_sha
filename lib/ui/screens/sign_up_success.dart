@@ -8,7 +8,6 @@ class SignUpSuccessScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: lightColor,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
