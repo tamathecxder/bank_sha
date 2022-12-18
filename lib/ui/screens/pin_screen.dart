@@ -2,12 +2,41 @@ import 'package:e_wallet/shared/theme.dart';
 import 'package:e_wallet/ui/widgets/buttons.dart';
 import 'package:flutter/material.dart';
 
-class PinScreen extends StatelessWidget {
+class PinScreen extends StatefulWidget {
   const PinScreen({super.key});
+
+  @override
+  State<PinScreen> createState() => _PinScreenState();
+}
+
+class _PinScreenState extends State<PinScreen> {
+  final TextEditingController pinController = TextEditingController(text: '');
+
+  addPin(String number) {
+    if (pinController.text.length < 6) {
+      setState(() {
+        pinController.text = pinController.text + number;
+      });
+
+      print(pinController.text);
+    }
+  }
+
+  deletePin() {
+    if (pinController.text.isNotEmpty) {
+      setState(() {
+        pinController.text =
+            pinController.text.substring(0, pinController.text.length - 1);
+      });
+
+      print(pinController.text);
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       backgroundColor: darkColor,
       body: Center(
         child: Padding(
@@ -31,6 +60,8 @@ class PinScreen extends StatelessWidget {
               SizedBox(
                 width: 200,
                 child: TextFormField(
+                  controller: pinController,
+                  readOnly: true,
                   obscureText: true,
                   obscuringCharacter: "*",
                   maxLength: 6,
@@ -63,39 +94,57 @@ class PinScreen extends StatelessWidget {
                 children: [
                   CustomInputButton(
                     number: "1",
-                    onTap: () {},
+                    onTap: () {
+                      addPin("1");
+                    },
                   ),
                   CustomInputButton(
                     number: "2",
-                    onTap: () {},
+                    onTap: () {
+                      addPin("2");
+                    },
                   ),
                   CustomInputButton(
                     number: "3",
-                    onTap: () {},
+                    onTap: () {
+                      addPin("3");
+                    },
                   ),
                   CustomInputButton(
                     number: "4",
-                    onTap: () {},
+                    onTap: () {
+                      addPin("4");
+                    },
                   ),
                   CustomInputButton(
                     number: "5",
-                    onTap: () {},
+                    onTap: () {
+                      addPin("5");
+                    },
                   ),
                   CustomInputButton(
                     number: "6",
-                    onTap: () {},
+                    onTap: () {
+                      addPin("6");
+                    },
                   ),
                   CustomInputButton(
                     number: "7",
-                    onTap: () {},
+                    onTap: () {
+                      addPin("7");
+                    },
                   ),
                   CustomInputButton(
                     number: "8",
-                    onTap: () {},
+                    onTap: () {
+                      addPin("8");
+                    },
                   ),
                   CustomInputButton(
                     number: "9",
-                    onTap: () {},
+                    onTap: () {
+                      addPin("9");
+                    },
                   ),
                   const SizedBox(
                     width: 60,
@@ -103,10 +152,14 @@ class PinScreen extends StatelessWidget {
                   ),
                   CustomInputButton(
                     number: "0",
-                    onTap: () {},
+                    onTap: () {
+                      addPin("0");
+                    },
                   ),
                   GestureDetector(
-                    onTap: () {},
+                    onTap: () {
+                      deletePin();
+                    },
                     child: Container(
                       width: 60,
                       height: 60,
