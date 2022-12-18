@@ -76,12 +76,16 @@ class ProfileScreen extends StatelessWidget {
                 ProfileMenuItem(
                   title: "Edit Profile",
                   iconUrl: "assets/ic-edit-profile.png",
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.pushNamed(context, "/pin");
+                  },
                 ),
                 ProfileMenuItem(
                   title: "My Pin",
                   iconUrl: "assets/ic-mypin.png",
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.pushNamed(context, "/pin");
+                  },
                 ),
                 ProfileMenuItem(
                   title: "Wallet Settings",

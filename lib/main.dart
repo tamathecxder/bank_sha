@@ -1,5 +1,6 @@
 import 'package:e_wallet/shared/theme.dart';
 import 'package:e_wallet/ui/screens/home_screen.dart';
+import 'package:e_wallet/ui/screens/pin_screen.dart';
 import 'package:e_wallet/ui/screens/profile_screen.dart';
 import 'package:e_wallet/ui/screens/sign_in_screen.dart';
 import 'package:e_wallet/ui/screens/onboarding_screen.dart';
@@ -44,6 +45,7 @@ class MyApp extends StatelessWidget {
         "/sign-up-success": (context) => const SignUpSuccessScreen(),
         "/home": (context) => const HomeScreen(),
         "/profile": (context) => const ProfileScreen(),
+        "/pin": (context) => const PinScreen(),
       },
     );
   }
