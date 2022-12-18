@@ -20,6 +20,10 @@ class _PinScreenState extends State<PinScreen> {
 
       print(pinController.text);
     }
+
+    if (pinController.text == '123123') {
+      Navigator.pop(context, true);
+    }
   }
 
   deletePin() {
