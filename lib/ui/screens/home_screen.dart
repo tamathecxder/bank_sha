@@ -449,7 +449,7 @@ class HomeScreen extends StatelessWidget {
         bottom: 50,
       ),
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           Text(
             "Friendly Tips",
@@ -462,8 +462,8 @@ class HomeScreen extends StatelessWidget {
             height: 14,
           ),
           Wrap(
-            runAlignment: WrapAlignment.spaceBetween,
-            alignment: WrapAlignment.spaceBetween,
+            alignment: WrapAlignment.spaceEvenly,
+            direction: Axis.horizontal,
             runSpacing: 16,
             spacing: 18,
             children: const [
