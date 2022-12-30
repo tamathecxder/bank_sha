@@ -1,4 +1,6 @@
 import 'package:e_wallet/shared/theme.dart';
+import 'package:e_wallet/ui/widgets/bank_item.dart';
+import 'package:e_wallet/ui/widgets/buttons.dart';
 import 'package:flutter/material.dart';
 
 class TopupScreen extends StatelessWidget {
@@ -16,7 +18,7 @@ class TopupScreen extends StatelessWidget {
         ),
         children: [
           const SizedBox(
-            height: 40,
+            height: 30,
           ),
           Text(
             "Wallet",
@@ -55,6 +57,46 @@ class TopupScreen extends StatelessWidget {
                 ],
               ),
             ],
+          ),
+          const SizedBox(
+            height: 40,
+          ),
+          Text(
+            "Select Bank",
+            style: blackTextStyle.copyWith(
+              fontSize: 16,
+              fontWeight: semiBold,
+            ),
+          ),
+          const SizedBox(
+            height: 14,
+          ),
+          const BankItem(
+            imageUrl: "assets/img-bank-bca.png",
+            bankName: "BANK BCA",
+            isSelected: true,
+          ),
+          const BankItem(
+            imageUrl: "assets/img-bank-bni.png",
+            bankName: "BANK BNI",
+          ),
+          const BankItem(
+            imageUrl: "assets/img-bank-mandiri.png",
+            bankName: "BANK Mandiri",
+          ),
+          const BankItem(
+            imageUrl: "assets/img-bank-ocbc.png",
+            bankName: "BANK OCBC NSP",
+          ),
+          const SizedBox(
+            height: 12,
+          ),
+          CustomFilledButton(
+            title: "Continue",
+            onPressed: () {},
+          ),
+          const SizedBox(
+            height: 58,
           ),
         ],
       ),
