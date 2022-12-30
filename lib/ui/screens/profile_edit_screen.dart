@@ -58,7 +58,7 @@ class ProfileEditScreen extends StatelessWidget {
                 CustomFilledButton(
                   title: "Update Now",
                   onPressed: () {
-                    Navigator.pushNamed(context, "/sign-up-set-profile");
+                    Navigator.pop(context);
                   },
                 ),
               ],
