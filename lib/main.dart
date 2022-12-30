@@ -12,6 +12,7 @@ import 'package:e_wallet/ui/screens/sign_up_set_ktp.dart';
 import 'package:e_wallet/ui/screens/sign_up_set_profile.dart';
 import 'package:e_wallet/ui/screens/sign_up_success.dart';
 import 'package:e_wallet/ui/screens/splash_screen.dart';
+import 'package:e_wallet/ui/screens/topup_screen.dart';
 import 'package:flutter/material.dart';
 
 void main(List<String> args) => runApp(const MyApp());
@@ -51,6 +52,7 @@ class MyApp extends StatelessWidget {
         "/profile-edit": (context) => const ProfileEditScreen(),
         "/profile-edit-pin": (context) => const ProfileEditPinScreen(),
         "/profile-edit-success": (context) => const ProfileEditSuccessScreen(),
+        "/topup": (context) => const TopupScreen(),
         "/pin": (context) => const PinScreen(),
       },
     );
