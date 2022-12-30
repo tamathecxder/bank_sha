@@ -58,7 +58,11 @@ class ProfileEditScreen extends StatelessWidget {
                 CustomFilledButton(
                   title: "Update Now",
                   onPressed: () {
-                    Navigator.pop(context);
+                    Navigator.pushNamedAndRemoveUntil(
+                      context,
+                      "/profile-edit-success",
+                      (route) => false,
+                    );
                   },
                 ),
               ],
